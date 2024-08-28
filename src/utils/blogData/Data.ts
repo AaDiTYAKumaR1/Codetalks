@@ -353,6 +353,7 @@ export const Data =[
         title:"How to write clean and better code",
         image:'/blogs/image-blog-social-writing-clean-code_0.png',
         description:"How to write clean and better code",
+        category:'#code-quality',
         content:`
         <div>
         <style>

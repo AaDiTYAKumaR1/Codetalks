@@ -14,8 +14,8 @@ export default function SignupPage() {
     const [loading, setLoading] = React.useState(false);
     const [diablesignup, setdisablesignup] = React.useState(true)
     const onSignup = async (e: any) => {
-        e.preventDefault();
-        console.log(user);
+        // e.preventDefault();
+        // console.log(user);   
         try {
             setLoading(true);
             const response = await axios.post('http://localhost:3000/api/users/signup', user)

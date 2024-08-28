@@ -6,18 +6,17 @@ export function middleware(request: NextRequest) {
   
     const path=request.nextUrl.pathname;
     const isPublicPath= path==='/'|| path==='/login'|| path==='/signup';
-    const token=request.cookies.get('token');
-    // console.log(isPublicPath);
+    const token=request.cookies.get('token') || '';
+    // console.log(token);
    
-    if(!isPublicPath && !token)
-    {
-        return NextResponse.redirect(new URL('/login',request.url))
-    }else{
-      // if(isPublicPath )
-      //   {
-            // console.log('redirecting to dashboard');
-            return NextResponse.redirect(new URL('/', request.url))
-        // }
+    // const token = request.cookies.get('token')?.value || ''
+
+    // if(isPublicPath && token) {
+    //   return NextResponse.redirect(new URL('/', request.nextUrl))
+    // }
+  
+    if (!isPublicPath && !token) {
+      return NextResponse.redirect(new URL('/login', request.nextUrl))
     }
 
 }
@@ -25,10 +24,14 @@ export function middleware(request: NextRequest) {
 // See "Matching Paths" below to learn more
 export const config = {
   matcher: [
-    // '/',
-    // '/login',
-    // '/signup',
-    // '/dashboard',
-    // '/profile',   
+    '/',
+    '/login',
+    '/signup',
+    '/blogs',
+    '/news',
+    '/newBlog',
+    '/dashboard',
+    '/profile',   
+    '/blogs/:id'
   ]
 }

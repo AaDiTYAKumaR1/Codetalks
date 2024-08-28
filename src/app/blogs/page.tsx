@@ -38,7 +38,7 @@ const page = () => {
         Data.map((blog, index)=>{
           if(title=='#all' || blog.category === title)
           return (
-            <div key={index} className='bg-white rounded-xl p-5 shadow-4xl col-span-1 md:col-span-1 scale-95 hover:scale-100 ease-in duration-500'>
+            <div key={index} className='bg-white rounded-xl p-5 shadow-2xl col-span-1 md:col-span-1 scale-95 hover:scale-100 ease-in duration-500'>
               <img src={blog.image} alt="" className='w-full  h-96  object-cover rounded-xl scale-95 hover:scale-100 ease-in duration-500' />
               <h2 className='text-2xl font-bold mt-5'>{blog.title}</h2>
               <p className='text-lg mt-5'>{blog.description}</p>

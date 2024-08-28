@@ -17,7 +17,7 @@ const page = () => {
         try {
             setLoading(true);
             const response= await axios.post('http://localhost:3000/api/users/login',user);
-            console.log('Login Successfully',response.data);
+            // console.log('Login Successfully',response.data);
             toast.success(response.data.message);
             router.push('/');
         } catch (error:any) {

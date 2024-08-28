@@ -29,7 +29,7 @@ const Navbar = () => {
     const navRef = useRef(null)
     const btnRef = useRef(null)
     return (
-        <nav ref={navRef} className='nav bg-yellow-500'>
+        <nav ref={navRef} className='nav bg-yellow-500  '>
             <div className='main-container max-w-7xl px-5 mx-auto flex items-center justify-between h-full w-full gap-x-6'>
 
                 <div>
@@ -59,15 +59,16 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
+                            <Link href='/news' className='hidden sm:list-item text-xl hover:bg-black hover:text-white p-4 m'>
+                                News
+                            </Link>
+                        </li>
+                        <li>
                             <Link href='/newBlog' className='hidden md:list-item text-xl hover:bg-black hover:text-white p-4 '>
                                 Write
                             </Link>
                         </li>
-                        <li>
-                            <Link href='signup' className='hidden sm:list-item text-xl hover:bg-black hover:text-white p-4 m'>
-                                Sign In
-                            </Link>
-                        </li>
+                       
                         <li>
                             <Link href='/profile'>
                                 <button ref={btnRef} className='btn-rounded-sm text-xl hover:bg-black hover:text-white p-4  '>

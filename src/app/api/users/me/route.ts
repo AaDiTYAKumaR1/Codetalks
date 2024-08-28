@@ -14,7 +14,7 @@ export async function POST(request:NextRequest){
                 error:'Unauthorized'
             })
          }
-         const user = await User.findOne({_id:id});
+         const user = await User.findOne({_id:id}).select( "-password");
         return NextResponse.json({
             message:'User fetched',
             data:user

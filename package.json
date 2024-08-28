@@ -17,6 +17,7 @@
     "axios": "^1.7.2",
     "bcryptjs": "^2.4.3",
     "html-to-react": "^1.7.0",
+    "js-cookies": "^1.0.4",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.4",
     "next": "14.2.4",
@@ -25,6 +26,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.52.1",
     "react-hot-toast": "^2.4.1",
+    "react-intersection-observer": "^9.13.0",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
