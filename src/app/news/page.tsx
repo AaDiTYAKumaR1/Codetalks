@@ -70,8 +70,9 @@ const NewsPage = () => {
                     )
                 })  
             } */}
-                        { newsData &&  newsData.map((news, index) => {
+                        {/* { newsData &&  newsData.map((news, index) => {
                             return (
+                                news &&
                                 indexLoading > index &&
                                 index > 0 &&
                                 news.urlToImage && (
@@ -95,7 +96,7 @@ const NewsPage = () => {
                                     </div>
                                 )
                             );
-                        })}
+                        })} */}
                          <div></div>
                     </div>
                     <div ref={ref} className="h-1" />

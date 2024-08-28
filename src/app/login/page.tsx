@@ -4,7 +4,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-const page = () => {
+const Page = () => {
     const router =useRouter();
     const [user, setUser] = useState({
         email: '',
@@ -44,7 +44,7 @@ const page = () => {
                         {loading ? 'Loading...' : 'Login'}
                     </button>
                     <p>
-                        Don't have an account? <Link href='/signup'><span className='text-blue-500'>Signup</span></Link>
+                        Dont have an account? <Link href='/signup'><span className='text-blue-500'>Signup</span></Link>
                     </p>
                 </div>
             </form>
@@ -53,4 +53,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

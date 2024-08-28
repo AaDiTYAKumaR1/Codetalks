@@ -25,7 +25,7 @@ const HomeCoverSection = () => {
               </Link>
               </div>
               <h1 className='text-4xl sm:text-6xl font-bold text-white'>The Best Stories For You</h1>
-              <p className='text-white text-lg sm:text-2xl'>Read and share ideas from independent voices, world-class publications, and experts from around the globe. Everyone's welcome.</p>
+              <p className='text-white text-lg sm:text-2xl'>Read and share ideas from independent voices, world-class publications, and experts from around the globe. Everyone welcome.</p>
             </div>
           </div>
           <div className=' absolute top-2 bottom-0 left-0 right-0 w-full h-full   '>

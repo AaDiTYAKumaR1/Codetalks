@@ -47,12 +47,12 @@ const NewsSection = () => {
             {
                 newsData.map((news,index)=>{
                     return(
-                        index<8 && index>0 && news.urlToImage &&
+                        index<8 && index>0 && 
                         <div key={index} className='bg-white rounded-xl p-5 shadow-2xl col-span-1 md:col-span-1 scale-95 hover:scale-100 ease-in duration-500'>
-                            <img src={news.urlToImage} alt="" className='w-full  h-96  object-cover rounded-xl scale-95 hover:scale-100 ease-in duration-500' />
-                            <h2 className='text-2xl font-bold mt-5'>{news.title}</h2>
-                            <p className='text-lg mt-5'>{news.description}</p>
-                            <button className='bg-black text-white rounded-lg p-3 mt-5 hover:text-black hover:bg-white hover:border-black hover:border-2' onClick={()=>window.open(news.url)} >Read More</button>
+                            {/* <img src={news.urlToImage} alt="" className='w-full  h-96  object-cover rounded-xl scale-95 hover:scale-100 ease-in duration-500' /> */}
+                            {/* <h2 className='text-2xl font-bold mt-5'>{news.title}</h2> */}
+                            {/* <p className='text-lg mt-5'>{news.description}</p> */}
+                            <button className='bg-black text-white rounded-lg p-3 mt-5 hover:text-black hover:bg-white hover:border-black hover:border-2'  >Read More</button>
                         </div>
                     )
                 })

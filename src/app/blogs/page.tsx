@@ -3,7 +3,7 @@ import React,{useState} from 'react'
 import { Data } from '@/utils/blogData/Data';
 import { category } from '@/utils/blogData/CategoryData';
 import { useRouter } from 'next/navigation'
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [title, setTitle] = useState(category[0]);
   const handleCategory =(e:any)=>{
@@ -53,4 +53,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

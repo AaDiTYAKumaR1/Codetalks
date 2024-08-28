@@ -4,11 +4,18 @@ import axios from 'axios';
 import {Avatar} from '@mui/material';
 import {CircularProgress} from '@mui/material';
 import {useRouter} from 'next/navigation';
-export default function page  () {
+
+
+
+type User = {
+  username: string;
+  email: string;
+};
+export default function Page  () {
     const router = useRouter();
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState<User | null>(null);
     const [loading, setLoading] = useState(true);
-    // useEffect(() => {
+   
         useEffect(() => {
             const getUser = async () => {
               try {
@@ -25,9 +32,9 @@ export default function page  () {
             getUser();  // Call the function only once
           }, []);  // Empty dependency array ensures this runs once after the initial render
         
-        const handleLogout = async (e) => {
+        const handleLogout = async () => {
             try {
-              e.preventDefault();
+              
               await axios.post('http://localhost:3000/api/users/logout');
               setUser(null);
               router.push('/login');
@@ -49,8 +56,11 @@ export default function page  () {
     <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
       <div className="flex flex-col md:w-[2/3] ">
         <Avatar sx={{ bgcolor: 'deepOrange[500]' }}>N</Avatar>
-        <h1 className="text-2xl font-bold mb-2">{user?.username}</h1>
+       
+        
+          <h1 className="text-2xl font-bold mb-2">{user?.username}</h1>
         <p className="text-gray-600 mb-4">{user?.email}</p>
+       
         <button
           className="px-4 mb-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-700"
           onClick={handleLogout}

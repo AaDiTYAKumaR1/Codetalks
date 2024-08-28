@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import { Data } from '@/utils/blogData/Data';
 import { Parser } from 'html-to-react'
 
-const page = () => {
+const Page = () => {
     const pathname = usePathname();
     const detail = pathname.split('/')[2];
     const index = Number(detail) - 1;
@@ -33,4 +33,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
