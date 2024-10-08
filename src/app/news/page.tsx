@@ -29,8 +29,8 @@ const NewsPage = () => {
            try
            {
             setLoading(true);
-            const res = await axios.get('https://newsapi.org/v2/everything?q=apple&from=2024-07-15&to=2024-07-15&sortBy=popularity&apiKey=5fe990ad262f4531bc59db8aa6cdc054');
-            // console.log(res.data);
+            const res = await axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=5fe990ad262f4531bc59db8aa6cdc054');
+            console.log(res.data);
             setnewsData(res.data.articles);
            }
               catch(error)
@@ -57,7 +57,7 @@ const NewsPage = () => {
                 <div className='px-4 md:px-16 lg:px-16 '>
 
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-5 md:px-10 lg:px-32'>
-                        {/* {
+                      {
                 newsData.map((news,index)=>{
                     return(
                         index<8 && index>0 && news.urlToImage &&
@@ -69,8 +69,7 @@ const NewsPage = () => {
                         </div>
                     )
                 })  
-            } */}
-                        {/* { newsData &&  newsData.map((news, index) => {
+            }      { newsData &&  newsData.map((news, index) => {
                             return (
                                 news &&
                                 indexLoading > index &&
@@ -96,7 +95,7 @@ const NewsPage = () => {
                                     </div>
                                 )
                             );
-                        })} */}
+                        })} 
                          <div></div>
                     </div>
                     <div ref={ref} className="h-1" />
