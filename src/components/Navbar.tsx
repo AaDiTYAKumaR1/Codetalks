@@ -24,30 +24,30 @@ const Navbar = () => {
 
 
 
-    useEffect(() => {
-        setTimeout(() => {
-            setProgress(0)
-        }, 50);
-    }, [])
-    const [user, setUser] = useState(null)
-    useEffect(() => {
-        const getUser = async () => {
-            try {
-                console.log('fetching user')
-                const res = await axios.get('http://localhost:3000/api/users/me');
-                console.log(res.data.data)
-                setUser(res.data.data)
-            } catch (error) {
-                console.log(error)
-            }
-            if (!user)
-                getUser();
-            // return () =>{
-            //     setUser(null)
-            // }
-        }
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setProgress(0)
+    //     }, 50);
+    // }, [])
+    // const [user, setUser] = useState(null)
+    // useEffect(() => {
+    //     const getUser = async () => {
+    //         try {
+            
+    //             const res = await axios.get('http://localhost:3000/api/users/me');
+    //             // console.log(res.data.data)
+    //             setUser(res.data.data)
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //         if (!user)
+    //             getUser();
+    //         // return () =>{
+    //         //     setUser(null)
+    //         // }
+    //     }
 
-    }, [])
+    // }, [])
 
     const navRef = useRef(null)
     const btnRef = useRef(null)
