@@ -1,10 +1,15 @@
+"use client";
 
+import { useState, useEffect } from 'react'
 export const Navigation = () => {
+ 
+    
     return (
     <>
     <header>
-      <nav >
-         <ul className="">
+      <nav >   
+    
+         <ul className="inline-block">
             <li className="inline-block p-4">
                <a href="/">Home</a>
             </li>
