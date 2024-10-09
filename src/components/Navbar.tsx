@@ -52,7 +52,7 @@ const Navbar = () => {
     const navRef = useRef(null)
     const btnRef = useRef(null)
     return (
-        <nav ref={navRef} className='bg-amber-300 border-b backdrop-blur-sm sticky top-0  z-50'>
+        <nav ref={navRef} className='bg-amber-500 border-b backdrop-blur-sm sticky top-0  z-50'>
             <div className='main-container max-w-7xl px-5 mx-auto flex items-center justify-between h-full w-full gap-x-6'>
 
                 <div>
