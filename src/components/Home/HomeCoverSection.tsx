@@ -20,12 +20,14 @@ const HomeCoverSection = () => {
             <div className=' flex flex-col w-1/2 gap-2 lg:gap-10 ml-10 mb-10'>
               <div>
               <Link href='/blogs'>
-              <button className='bg-black text-white rounded-lg px-12 md:px-24 border-2 border-black py-4 text-2xl rounded-3xl   mt-5 hover:text-black hover:bg-white hover:border-black hover:border-2'>Read More</button>
+              <button className='bg-black text-white rounded-lg px-12 md:px-24 border-2 border-black py-4 text-2xl rounded-3xl 
+                mt-5 hover:text-black hover:bg-white hover:border-black hover:border-2'>
+                  Read More</button>
                 {/* <Button variant='contained' className='bg-blue-500'>Start Reading</Button> */}
               </Link>
               </div>
-              <h1 className='text-4xl sm:text-6xl font-bold text-white'>The Best Stories For You</h1>
-              <p className='text-white text-lg sm:text-2xl'>Read and share ideas from independent voices, world-class publications, and experts from around the globe. Everyone welcome.</p>
+              <h1 className='text-4xl sm:text-6xl font-bold text-white hidden sm:block'>The Best Stories For You</h1>
+              <p className='text-white text-lg hidden sm:block sm:text-2xl'>Read and share ideas from independent voices, world-class publications, and experts from around the globe. Everyone welcome.</p>
             </div>
           </div>
           <div className=' absolute top-2 bottom-0 left-0 right-0 w-full h-full   '>

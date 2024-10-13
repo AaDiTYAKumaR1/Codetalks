@@ -6,7 +6,7 @@ import Header from "../components/Header";
 const inter = Inter({ subsets: ["latin"] });
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar/>
         {children}
-        {/* <Footer/> */}
+        <Footer/>
       </body>
     </html>
   );
