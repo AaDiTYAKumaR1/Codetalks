@@ -6,7 +6,7 @@ import Header from "../components/Header";
 const inter = Inter({ subsets: ["latin"] });
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer/index.js";
 
 export const metadata: Metadata = {
   title: "Create Next App",
